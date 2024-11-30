@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0f1d1b; /* New background color for navbar */
+    padding: 10px;
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: #ffffff; /* Change link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar a:hover {
+    color: #f9c74f; /* Hover color */
+}
+
+
+#dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+#sidebar {
+    width: 200px;
+    background-color: #aab8b0; /* Lighter gray for sidebar */
+    color: white;
+    padding: 20px;
+    height: 100%;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar li {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+
+#content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f6f8f9; /* Very light color for main content */
+}
+
+.section-content {
+    display: none;
+}
+
+.section-content.active {
+    display: block;
+}
+
+#transaction-checker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Increased space between buttons */
+    margin-top: 20px; /* Margin at the top */
+}
+
+.checker-button {
+    background-color: #264653; /* Dark teal color for buttons */
+    color: white;
+    padding: 30px; /* Increased padding for bigger buttons */
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 160px; /* Increased width for consistency */
+    font-size: 1.2em; /* Increased font size */
+}
+
+.checker-button h4 {
+    margin: 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #f9c74f; /* Soft yellow for general buttons */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f9844a; /* Darker orange on hover */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15%; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50% /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.about-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.round-img {
+    border-radius: 50%;
+    width: 150px; /* Increased size of about us images */
+    height: 150px; /* Increased size of about us images */
+}
+
+.logo-img {
+    width: 10 rem; /* Decreased size of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+.hero {
+    margin: 20px 0; /* Top and bottom margin */
+    padding: 20px;  /* Optional padding for inside spacing */
+    background-color: #f8f8f8; /* Optional background color */
+}
+
+#about {
+    margin: 20px 0; /* Top and bottom margin */
+    padding: 35px; /* Optional padding */
+    background-color: #ffffff; /* Optional background color */
+}
+
+#contact{
+    margin: 20px 0; /* Top and bottom margin */
+    padding: 20px; /* Optional padding */
+    background-color: #ffffff; /* Optional background color */
+}

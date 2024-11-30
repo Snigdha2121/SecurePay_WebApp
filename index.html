@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurePay Shield</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Landing Page -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="SecurePay Shield Logo" class="logo-img"> <!-- Replace with your logo -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button onclick="showSignUp()">Get Started</button></li>
+                <li><button onclick="showLogin()">Login</button></li>
+                <li><button onclick="showReportBug()">Report a Bug</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to SecurePay Shield</h1>
+        <p>Your trusted partner in detecting and preventing fraudulent transactions.</p>
+        <button onclick="showSignUp()">Get Started</button>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about-images">
+            <img src="SG.png" alt="Snigdha Gupta" class="round-img">
+            <img src="divyanshi.png" alt="Divyanshi Shrimali" class="round-img">
+        </div>
+        <p>Hello! We’re Snigdha Gupta and Divyanshi Shrimali, B.Tech students from Rajasthan Technical University specializing in Computer Science with a focus on Artificial Intelligence. Driven by a shared passion for innovation, we aim to create solutions that can contribute positively to society. Through our projects, we hope to bring practical benefits to people and make a meaningful impact on the world around us.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>LinkedIn (Snigdha): <a href="https://www.linkedin.com/in/snigdha-gupta-00068220b" target="_blank">Snigdha Gupta</a></p>
+        <p>LinkedIn (Divyanshi): <a href="https://www.linkedin.com/in/divyanshishrimali/" target="_blank">Divyanshi Shrimali</a></p>
+    </section>
+
+    <!-- Sign Up Modal -->
+    <div id="signup-container" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signup-container')">&times;</span>
+            <h2>Create Your Account</h2>
+            <input type="text" id="signup-name" placeholder="Full Name" required>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <input type="text" id="signup-phone" placeholder="Phone Number" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <button onclick="signup()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-container" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('login-container')">&times;</span>
+            <h2>Login to Your Account</h2>
+            <input type="text" id="login-email-or-phone" placeholder="Email or Phone" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

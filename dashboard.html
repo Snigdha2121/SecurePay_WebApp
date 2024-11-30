@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurePay Shield - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Dashboard Structure -->
+    <div id="dashboard-container">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <ul>
+                <li onclick="showSection('dashboard')" class="active">Dashboard</li>
+                <li onclick="showSection('report')">Report a User</li>
+                <li onclick="showSection('settings')">User Settings</li>
+                <li><button onclick="logout()">Logout</button></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="content">
+            <!-- Dashboard -->
+            <div id="dashboard-section" class="section-content" style="display: block;">
+                <h3 style="text-align: center;">Transaction Checker</h3>
+                <div id="transaction-checker">
+                    <div class="checker-button" onclick="navigateToChecker('UPI')">
+                        <h4>Check UPI</h4>
+                    </div>
+                    <div class="checker-button" onclick="navigateToChecker('Net Banking')">
+                        <h4>Check Net Banking</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UPI/Card Checker Form -->
+            <div id="checker-form-section" class="section-content" style="display: none;">
+                <h3>Check Transaction Security</h3>
+                <input type="text" id="receiver-name" placeholder="Recipient's Name" required>
+                <input type="text" id="receiver-upi" placeholder="Recipient's UPI ID or Card Number" required>
+                <button onclick="checkSecurity()">Check Security</button>
+                <div id="security-result"></div>
+            </div>
+
+            <!-- Report a User Form -->
+            <div id="report-section" class="section-content" style="display: none;">
+                <h3>Report a User</h3>
+                <input type="text" placeholder="User Name" required>
+                <input type="text" placeholder="UPI ID or Card Number">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Phone Number">
+                <textarea placeholder="Describe the fraud" required></textarea>
+                <button onclick="submitReport()">Submit Report</button>
+            </div>
+
+            <!-- User Settings -->
+            <div id="settings-section" class="section-content" style="display: none;">
+                <h3>User Settings</h3>
+                <input type="email" placeholder="Change Email">
+                <input type="password" placeholder="Change Password">
+                <button onclick="updateSettings()">Update Settings</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
